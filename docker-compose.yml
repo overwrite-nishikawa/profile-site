@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
  php:
@@ -6,7 +6,16 @@ services:
   ports: 
   - 8006:80
   volumes:
-  - ./docker:/var/www/html
+  - ./html:/var/www/html
+
+front:
+   build: .
+   tty: true
+   ports:
+   - "3000:3000" # 開発用
+   volumes:
+   - ./app/profile-site:/app # ./app/{プロジェクト名}:/app
+   command: yarn dev
 
 
 

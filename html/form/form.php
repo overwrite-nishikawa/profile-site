@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="">
     </head>
-    <body>
+    <body class="scroll-smooth">
         <form action="confirmForm.php" method="POST">
             <ul>
                 <li>
@@ -16,6 +16,10 @@
                     <label for="address">住所</label>
                     <input type="text" name="address">
                 </li>
+                <!-- <li>
+                    <input id="men" type="checkbox" name="jender[]">
+                    <label for="men">男</label>
+                </li> -->
                 <li>
                     <label for="phone">電話番号</label>
                     <input type="text" name="phone">
