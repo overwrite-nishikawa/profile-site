@@ -6,7 +6,20 @@ services:
   ports: 
   - 8006:80
   volumes:
-  - ./docker:/var/www/html
+  - ./practice:/var/www/html/practice
+  depends_on:
+  - phpdb
+
+ phpdb:
+  image: mysql:5.7
+  restart: always
+  environment:
+    MYSQL_ROOT_PASSWORD: myrootpassword
+    MYSQL_DATABASE: phpdb
+    MYSQL_USER: phpdb
+    MYSQL_PASSWORD: phppass
+
+
 
 
 
